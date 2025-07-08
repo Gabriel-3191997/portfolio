@@ -3,11 +3,12 @@
 
 Frontend
 
-React
-TailwindCSS (flowbite)
-JQuery 
+1. React
+2. TailwindCSS (flowbite)
+3. JQuery 
+
 
 Backend
 
-ExpressJS
-MySQL
+1.ExpressJS
+2. MySQL
