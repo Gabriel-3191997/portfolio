@@ -1,2 +1,14 @@
 # portfolio
-ReactJS, TailwindCSS, ExpressJS
+
+Frontend
+==========
+
+React
+TailwindCSS (flowbite)
+JQuery 
+
+Backend
+=========
+
+ExpressJS
+MySQL
