@@ -1,13 +1,13 @@
 # Portfolio
 
 
-##Frontend
+## Frontend
 
 React
 TailwindCSS (flowbite)
 JQuery 
 
-##Backend
+## Backend
 
 ExpressJS
 MySQL
