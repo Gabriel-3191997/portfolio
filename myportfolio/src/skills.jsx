@@ -11,7 +11,7 @@ class Skills extends React.Component{
 
 			<>
 				
-			<div className="h-96 flex flex-wrap justify-evenly pt-5  gap-2 flex-grow-0 m-5 mb-10">
+			<div className="h-auto flex flex-wrap justify-evenly pt-5  gap-2 flex-grow-0 m-5 mb-0 bg-fixed scroll-smooth">
 				<div className="w-80">
 					<img className="hover:cursor-pointer" src={images}/>
 				</div>

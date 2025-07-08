@@ -4,6 +4,8 @@ import Banner from './banner'
 import Content from './content-section'
 import Section from './section'
 import Skills from './skills'
+import Rating from './rating'
+// import $ from 'jquery';
 
 class App extends React.Component {
 
@@ -17,6 +19,7 @@ class App extends React.Component {
        <Content/>
        <Section/>
        <Skills/>
+       <Rating/>
       </>
 
       )

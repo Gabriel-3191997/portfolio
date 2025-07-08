@@ -1,29 +1,70 @@
-import React from 'react'
-import images from
-'./images/487804623_2475805612812201_4372487470002518231_n.jpg'
-class Content extends React.Component{
+import React from 'react';
+import $ from 'jquery';
+import image from './images/487804623_2475805612812201_4372487470002518231_n.jpg';
 
-	render(){
+class Content extends React.Component {
+  componentDidMount() {
+    $("span#text").hide();
 
-		return (
+    $("#readmore").click(function () {
+      $("span#text").toggle();
+    });
 
-			<div className = "flex flex-wrap justify-evenly m-8 pt-3">
-				<div>
-					<img className="w-96 hover:cursor-pointer" src = {images}/>
-				</div>
-				<div className="max-w-2xl">
-					<h1 className ="text-3xl font-semibold capitalize py-5 m-2">auto biography</h1>
-					<p className="font-sans p-3 md:text-justify">
-					Full Stack Developer with 2–3 years of experience in building responsive web applications using ReactJS, ExpressJS, MySQL, and Python. Skilled in both frontend and backend development, database management, and data analysis. Backed by multiple certifications in programming and IT, with a strong focus on scalable, efficient solutions and a proven ability to contribute to real-world projects. Passionate about continuous learning, innovation, and impactful problem-solving.
+    const content = $("#content");
+    const isMobile = window.innerWidth <= 768;
 
+    if (isMobile) {
+      content.css({ position: "relative", left: "0px" });
+      return;
+    }
 
-					</p>
-			</div>
-		</div>
+    content.css({ position: "relative", left: "30px" });
 
+    let isVisible = false;
 
-			)
-	}
+    $(window).on("scroll", function () {
+      const windowHeight = $(window).height();
+      const scrollTop = $(window).scrollTop();
+      const elementOffset = content.offset().top;
+      const elementHeight = content.height();
+      const elementCenter = elementOffset + elementHeight / 2;
+      const windowCenter = scrollTop + windowHeight / 2;
+
+      if (Math.abs(windowCenter - elementCenter) < 100) {
+        if (!isVisible) {
+          content.stop().animate({ left: '20px' }, 500);
+          isVisible = true;
+        }
+      } else {
+        if (isVisible) {
+          content.stop().css({ left: '-20px' });
+          isVisible = false;
+        }
+      }
+    });
+  }
+
+  render() {
+    return (
+      <div className="flex flex-wrap justify-evenly m-8 pt-3">
+        <div>
+          <img className="w-96 hover:cursor-pointer" src={image} alt="Profile" id="img" />
+        </div>
+        <div className="max-w-2xl" id="content">
+          <h1 className="text-3xl font-semibold capitalize py-5 m-2">auto biography</h1>
+          <p className="font-sans p-3 md:text-justify">
+            Full Stack Developer with 2–3 years of experience in building responsive web applications using ReactJS, ExpressJS, MySQL, and Python. Skilled in both frontend and backend development, database management, and data analysis.
+            <span id="text">
+              &nbsp;Backed by multiple certifications in programming and IT, with a strong focus on scalable, efficient solutions and a proven ability to contribute to real-world projects. Passionate about continuous learning, innovation, and impactful problem-solving.
+            </span>
+            <span className="text-teal-700 flex-col flex mt-2">
+              <a href="#" id="readmore" className="text-teal-700">Read more</a>
+            </span>
+          </p>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Content
+export default Content;
