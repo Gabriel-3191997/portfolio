@@ -3,6 +3,7 @@ import $ from 'jquery';
 import image from './images/487804623_2475805612812201_4372487470002518231_n.jpg';
 
 class Content extends React.Component {
+
   componentDidMount() {
     $("span#text").hide();
 
@@ -11,10 +12,13 @@ class Content extends React.Component {
     });
 
     const content = $("#content");
+
     const isMobile = window.innerWidth <= 768;
 
     if (isMobile) {
+
       content.css({ position: "relative", left: "0px" });
+
       return;
     }
 
@@ -23,24 +27,39 @@ class Content extends React.Component {
     let isVisible = false;
 
     $(window).on("scroll", function () {
+
       const windowHeight = $(window).height();
+
       const scrollTop = $(window).scrollTop();
+
       const elementOffset = content.offset().top;
+
       const elementHeight = content.height();
+
       const elementCenter = elementOffset + elementHeight / 2;
+
       const windowCenter = scrollTop + windowHeight / 2;
 
       if (Math.abs(windowCenter - elementCenter) < 100) {
+
         if (!isVisible) {
+
           content.stop().animate({ left: '20px' }, 500);
+
           isVisible = true;
+
         }
       } else {
+
         if (isVisible) {
+
           content.stop().css({ left: '-20px' });
+
           isVisible = false;
+
         }
       }
+      
     });
   }
 
