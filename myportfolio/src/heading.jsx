@@ -3,13 +3,16 @@ import $ from 'jquery';
 
 class Heading extends React.Component {
   componentDidMount() {
-    const isMobile = window.innerWidth < 600;
+    
+    $(document).ready(function(){
+
+      const isMobile = window.innerWidth < 600;
     let lastScrollTop = 0;
 
     if (!isMobile) {
       $('#heading')
         .css({ position: 'relative', left: '-100px' })
-        .animate({ left: '0px' }, 9000);
+        .animate({ left: '0px' }, 1000);
 
       $(window).on('scroll', function () {
         let currentScroll = $(this).scrollTop();
@@ -25,6 +28,8 @@ class Heading extends React.Component {
     } else {
       $('#heading').css({ position: 'relative', left: '0px' });
     }
+
+    });
   }
 
   render() {
