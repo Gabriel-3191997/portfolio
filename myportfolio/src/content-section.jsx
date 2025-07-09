@@ -27,7 +27,7 @@ class Content extends React.Component {
     let isVisible = false;
 
     $(window).on("scroll", function () {
-
+      
       const windowHeight = $(window).height();
 
       const scrollTop = $(window).scrollTop();
@@ -54,12 +54,10 @@ class Content extends React.Component {
         if (isVisible) {
 
           content.stop().css({ left: '-20px' });
-
           isVisible = false;
 
         }
       }
-      
     });
   }
 
