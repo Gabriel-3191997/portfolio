@@ -38,7 +38,7 @@ class Section extends React.Component{
 					</p>
 				</div>
 			</div>
-			<div className="database flex flex-wrap justify-center mt-10 gap-0">
+			<div className="database flex flex-wrap justify-center mt-5 gap-0">
 			<div className="w-80 md:w-96 bg-white h-72">
 										<div className="w-20 ml-5 mt-5 text-teal-500 text-4xl font-normal">
     <FontAwesomeIcon icon={faDesktop} />
