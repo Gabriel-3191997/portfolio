@@ -38,6 +38,19 @@ class Section extends React.Component{
 					</p>
 				</div>
 			</div>
+			<div className="database flex flex-wrap justify-center mt-10 gap-3">
+			<div className="w-80 md:w-96 bg-white h-72">
+										<div className="w-20 ml-5 mt-5 text-teal-500 text-4xl font-normal">
+    <FontAwesomeIcon icon={faDesktop} />
+  </div>
+					<h1 className="text-teal font-sans ml-5 text-3xl font-semibold capitalize py-3">
+						data base management
+					</h1>
+					<p className="text-left font-sans capitalize text-md font-sans ml-5 capitalize m-2">
+						Experienced Database Administrator skilled in MySQL and MongoDB, with a proven ability to ensure data integrity, security, and scalability while delivering efficient, data-driven solutions.
+					</p>
+			</div>
+			</div>
 
 				</div>
 

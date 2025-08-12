@@ -38,8 +38,7 @@ class Heading extends React.Component {
         <h1 className="text-white font-sans text-5xl md:text-5xl font-semibold capitalize">
           hi, i'm <br />
           gabriel w. kun <br />
-          full stack software <br />
-          developer
+          full stack developer
         </h1>
       </div>
     );
