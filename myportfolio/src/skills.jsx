@@ -1,6 +1,6 @@
 import React from 'react'
 import images from
-'./images/488275273_2476596346066461_8349047784333643822_n.jpg'
+'./images/WhatsApp Image 2025-08-15 at 2.08.15 PM.jpeg'
 
 class Skills extends React.Component{
 

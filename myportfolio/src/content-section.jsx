@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import image from './images/487804623_2475805612812201_4372487470002518231_n.jpg';
+import image from './images/dev_img.jpeg';
 
 class Content extends React.Component {
 
@@ -69,7 +69,7 @@ class Content extends React.Component {
         </div>
         <div className="max-w-2xl" id="content">
           <h1 className="text-3xl font-semibold capitalize py-5 m-2">auto biography</h1>
-          <p className="font-sans p-3 md:text-justify">
+          <p className="font-sans p-3 md:text-justify text-ellipsis">
             Full Stack Developer with 2–3 years of experience in building responsive web applications using ReactJS, ExpressJS, MySQL, and Python. Skilled in both frontend and backend development, database management, and data analysis.
             <span id="text">
               &nbsp;Backed by multiple certifications in programming and IT, with a strong focus on scalable, efficient solutions and a proven ability to contribute to real-world projects. Passionate about continuous learning, innovation, and impactful problem-solving.
