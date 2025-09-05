@@ -1,8 +1,8 @@
 import React from 'react'
 import Heading from './heading'
 import Nav from './nav'
-import heroImage from './images/hero-image.jpeg';
-
+import images from
+'./images/hero-image.jpeg';
 class Banner extends React.Component{
 
 	render(){
