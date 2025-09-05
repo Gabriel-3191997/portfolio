@@ -6,6 +6,7 @@ import Section from './section'
 import Skills from './skills'
 import Rating from './rating'
 import $ from 'jquery';
+import TechSkills from './tech_skills'
 
 class App extends React.Component {
 
@@ -20,6 +21,7 @@ class App extends React.Component {
        <Section/>
        <Skills/>
        <Rating/>
+       <TechSkills/>
 
       </>
 

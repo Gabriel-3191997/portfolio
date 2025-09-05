@@ -58,6 +58,8 @@ class Content extends React.Component {
 
         }
       }
+        // Slide image automatically
+      $("#img").css({ position: 'relative' }).animate({ left: "20px" }, 1000);
     });
   }
 
@@ -65,7 +67,7 @@ class Content extends React.Component {
     return (
       <div className="flex flex-wrap justify-evenly m-8 pt-3">
         <div>
-          <img className="w-96 hover:cursor-pointer" src={image} alt="Profile" id="img" />
+          <img className="w-96 hover:cursor-pointer hover:bg-blend-overlay hover:bg-gray-800" src={image} alt="Profile" id="img" />
         </div>
         <div className="max-w-2xl" id="content">
           <h1 className="text-3xl font-semibold capitalize py-5 m-2">auto biography</h1>

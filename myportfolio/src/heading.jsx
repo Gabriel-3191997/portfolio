@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import GitHub from './github';
 
 class Heading extends React.Component {
   componentDidMount() {
@@ -34,13 +35,19 @@ class Heading extends React.Component {
 
   render() {
     return (
-      <div className="flex justify-center flex-wrap py-5 ml-10" id="heading">
+      <>
+      <div className="flex justify-center flex-wrap py-1 md:py-5 ml-10" id="heading">
         <h1 className="text-white font-sans text-5xl md:text-5xl font-semibold capitalize">
           hi, i'm <br />
           gabriel w. kun <br />
           full stack developer
         </h1>
       </div>
+      <div className="flex justify-center items-center py-5">
+        <GitHub/>
+      </div>
+      </>
+
     );
   }
 }

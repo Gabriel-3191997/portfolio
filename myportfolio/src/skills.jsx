@@ -1,51 +1,84 @@
-import React from 'react'
-import images from
-'./images/WhatsApp Image 2025-08-15 at 2.08.15 PM.jpeg'
+import React from 'react';
+import $ from 'jquery';
+import images from './images/WhatsApp Image 2025-08-15 at 2.08.15 PM.jpeg';
 
-class Skills extends React.Component{
+class Skills extends React.Component {
+  componentDidMount() {
+    $(document).ready(function () {
+      function animateProgressBar($bar) {
+        const finalWidth = $bar.data('width');
+        $bar.css({ width: '0' }).animate({ width: finalWidth }, 1500, function () {
+          $bar.animate({ width: '0' }, 1500, function () {
+            animateProgressBar($bar);
+          });
+        });
+      }
 
-	render(){
+      $(".progress-bar").each(function () {
+        animateProgressBar($(this));
+      });
 
-		return(
+      // Slide image automatically
+      $("#img-slide").css({ position: 'relative' }).animate({ left: "20px" }, 1000);
+    });
+  }
 
+  render() {
+    return (
+      <>
+        <div className="h-auto flex flex-wrap justify-evenly pt-5 gap-2 flex-grow-0 m-5 mb-0 bg-fixed scroll-smooth">
+          <div className="w-80">
+            <img
+              className="hover:cursor-pointer"
+              src={images}
+              alt="skills"
+              id="img-slide"
+            />
+          </div>
 
-			<>
-				
-			<div className="h-auto flex flex-wrap justify-evenly pt-5  gap-2 flex-grow-0 m-5 mb-0 bg-fixed scroll-smooth">
-				<div className="w-80">
-					<img className="hover:cursor-pointer" src={images}/>
-				</div>
-				<div className="w-80">
-					<h1 className="text-4xl font-sans font-semibold uppercase pt-4">skills</h1>
-						{/*frontend development*/}
-						<div className="pt-8">
-							<p className="py-2 font-sans font-semibold capitalize">frontend development</p>
-							<div className="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-  						<div className="bg-teal-500 h-2.5 rounded-full w-52"></div>
-						</div>
-						</div>
-						{/*backend development rating*/}
-						<div className="pt-8">
-							<p className="py-2 font-sans font-semibold capitalize">backend development</p>
-							<div className="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-  				<div className="bg-teal-500 h-2.5 rounded-full w-52">
-  				</div>
-				</div>
-				</div>
-				{/*UI UX*/}
-				<div className="pt-8 mb-20">
-							<p className="py-2 font-sans font-semibold capitalize">ui ux design</p>
-							<div className="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-  				<div className="bg-teal-500 h-2.5 rounded-full w-52"></div>
-				</div></div>
-				</div>
-			</div>
+          <div className="w-80">
+            <h1 className="text-4xl font-sans font-semibold uppercase pt-4">
+              skills
+            </h1>
 
-			</>
+            <div className="pt-8">
+              <p className="py-2 font-sans font-semibold capitalize">
+                frontend development
+              </p>
+              <div className="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="progress-bar bg-teal-500 h-2.5 rounded-full"
+                  data-width="70%"
+                ></div>
+              </div>
+            </div>
 
+            <div className="pt-8">
+              <p className="py-2 font-sans font-semibold capitalize">
+                backend development
+              </p>
+              <div className="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="progress-bar bg-teal-500 h-2.5 rounded-full"
+                  data-width="60%"
+                ></div>
+              </div>
+            </div>
 
-			)
-	}
+            <div className="pt-8 mb-20">
+              <p className="py-2 font-sans font-semibold capitalize">ui ux design</p>
+              <div className="w-80 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="progress-bar bg-teal-500 h-2.5 rounded-full"
+                  data-width="80%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
 }
 
-export default Skills
+export default Skills;

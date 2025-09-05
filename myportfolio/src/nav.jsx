@@ -11,7 +11,7 @@ class Nav extends React.Component{
 
 <nav class="bg-white border-gray-200 dark:bg-transparent">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse mx-5">
         {/*<img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />*/}
         <span class="self-center text-2xl font-semibold uppercase ml-2 whitespace-nowrap dark:text-white">portfolio</span>
     </a>
@@ -23,14 +23,14 @@ class Nav extends React.Component{
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-none rounded-lg bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent dark:border-gray-700 mr-2">
-  <li>
+  {/* <li>
     <a href="#" class="block py-2 px-3 text-white rounded-sm md:p-0 dark:text-white md:dark:text-white hover:text-blue-700" aria-current="page">Home</a>
-  </li>
+  </li> */}
   <li>
     <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">About</a>
   </li>
   <li>
-    <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Services</a>
+    <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Gallery</a>
   </li>
   <li>
     <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Blog</a>
