@@ -1,0 +1,13 @@
+body{
+  margin: 0px;
+}
+
+#hero-image{
+
+  background-image: url('images/hero-image.jpeg');
+}
+
+span#readmore{
+
+  display: none;
+}
