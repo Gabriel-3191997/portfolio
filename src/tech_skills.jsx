@@ -17,7 +17,7 @@ class TechSkills extends React.Component {
         <div className="w-80 md:mx-20">
             <iframe
               src={`https://drive.google.com/file/d/${fileId}/preview`}
-              className="md:mt-10 w-max md:w-md md:h-72 bg-white"
+              className="md:mt-10 w-80 md:w-md md:h-72 bg-white"
               title="Projects"
             />
           </div>
